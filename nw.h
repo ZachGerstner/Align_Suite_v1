@@ -3,30 +3,34 @@
 #include<cassert>
 #include<cstdlib>
 #include<cstring>
+#include<cstdio>
+using namespace std;
 //classes
 class Management{
-	int debug;
 	public:
+		int debug;
+		char background[2];
 		void set_debug_on();
 		void set_debug_off();
-} manage;
+};
 class sequence{
-	char x[100];
-	char y[100];
 	public:
-		void get_attribute_seq();
-} seq;
+		string *x;
+		string *y;
+		void get_attribute_seqx(string *x);
+		void get_attribute_seqy(string *y);
+};
 class compute{
-	int sx, sy, m, mm, sig;
 	public:
-		int compare(int, int, int);
+		int sx, sy, m, mm, sig;
+		inline int compare(int, int, int);
 		void get_attribute_math();
 		//int computematrix(const compute
-} math;
+};
 class Algorithm{
 	public:
-	int needleman_wunsch();
-} Alg;
+	int needleman_wunsch(Management);
+};
 //get_seqx();:wq
 //vim
 //get_seqy():

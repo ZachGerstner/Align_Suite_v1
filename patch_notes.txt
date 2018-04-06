@@ -1,0 +1,36 @@
+Index:
+(-) == implemented changes
+(+) == musings and possible ideas not implemented
+===============================================================================
+28 Feb 2018
+-Modified Attr, nw1, nw.h
+-started to fix pointer issues
+	-utilize pointer in prototype in nw.h
+	-utilize pointer for reading in sequences
+Todo
+	-utilize pointer for passing sequences to math
+
+2 March 2018
+-Tried to figure out pointer pass (pointer solution not going to work)
+
+3 April 2018 
++convert seq x,y to pointers
++pass those pointers to align
++manipulations should stay
+
+4 April 2018
+-converted seq to string 
+-converted get_attribute_seqx/y to string*
+-error in printing debug stuff need to convert to cout <-.->
+-added strings in get_attr_seq functions pointed seq*
+-compiled and worked (converted to cerr)
+-seq was not read in needs different read in thing
+
+6 April 2018
+-added cin.ignore to address manual read in option.
++pointers still not behaving, need a static solution or to restrcture.
+Todo
+	+implement either a static solution or a restructure of function calls
+	+write calculation of NW score
+	+write Align function
+	+change exit to a loop back for the program.
