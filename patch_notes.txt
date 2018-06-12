@@ -34,3 +34,20 @@ Todo
 	+write calculation of NW score
 	+write Align function
 	+change exit to a loop back for the program.
+
+8 April 2018
+-Investigated global pointer solution
+-Rewrote main.cpp such that program loops until user is satisfied
+
+9 April 2018
++concieved a gui concept will use java
+
+10 April 2018
++lots of bugs still dont have the implimentation down.
+-fragmented implimentation of 
+
+27 May 2018
+-issue with string != Null statement
+   -appears to be due to strings not having a concept of null
+   -solution appears to require either  s.empty() or a pointer??
+

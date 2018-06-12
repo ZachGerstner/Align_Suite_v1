@@ -17,8 +17,8 @@ class sequence{
 	public:
 		string *x;
 		string *y;
-		void get_attribute_seqx(string *x);
-		void get_attribute_seqy(string *y);
+		string get_attribute_seqx();
+		string get_attribute_seqy();
 };
 class compute{
 	public:
@@ -31,8 +31,4 @@ class Algorithm{
 	public:
 	int needleman_wunsch(Management);
 };
-//get_seqx();:wq
-//vim
-//get_seqy():
-//comp();
-//align();
+
