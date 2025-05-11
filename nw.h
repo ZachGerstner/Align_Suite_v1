@@ -1,9 +1,14 @@
 //includes
-#include<iostream>
-#include<cassert>
-#include<cstdlib>
-#include<cstring>
-#include<cstdio>
+#ifdef DEBUG
+#include <iostream>
+#include <cassert>
+#include <cstdlib>
+#include <string>
+#include <cstdio>
+#include <vector>
+#include <algorithm>
+#include <fstream>
+#include <ctime>
 using namespace std;
 //classes
 class Management{
@@ -32,3 +37,18 @@ class Algorithm{
 	int needleman_wunsch(Management);
 };
 
+//Log function
+std::ofstream log_file("debug.log", std::ios::app);
+
+void log_entry(const std::string& message){
+	std::time_t now = std::time(nullptr);
+	std::tm now_tm;
+	localtime_r(&now, &now_tm);
+	char timestamp[26];
+	strftime(timestamp, sizeof(timestamp), "%Y-%m-%d %H:%M:%S", &now_tm);
+	log_file << "[" << timestamp << "]" << message << std::endl;
+}
+#else
+//Define an empty log_entry function in release builds
+inline void log_entry(const std::string&){}
+#endif

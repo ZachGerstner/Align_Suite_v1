@@ -1,5 +1,5 @@
-#include"nw.h"
-#include<stdio.h>
+#include "nw.h"
+#include <stdio.h>
 int main ()
 {
 	//Variable Declarations
@@ -17,6 +17,7 @@ int main ()
 	fprintf(stdout, "Would you like to enable Debugging output?\nY or N:");
 	std::cin>>debug;
 	assert(debug != NULL);
+	log_entry("Debugging activated!");
 	if(debug[0] == 'Y' || debug[0] == 'y')
 	{
 		management.set_debug_on();
